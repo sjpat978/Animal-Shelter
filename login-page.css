@@ -84,16 +84,16 @@ html{
   .login-form-field {
     border: none;
     border-bottom: 1px solid #3a3a3a;
-    margin-bottom: 10px;
-    border-radius: 3px;
+    margin-bottom: 20px;
+    border-radius: 10px;
     outline: none;
-    padding: 0px 0px 5px 5px;
+    padding: 5px 5px 10px 10px;
   }
   
   /* Style the login button */
   
   #login-form-submit {
-    width: 80%;
+    width: 100%;
     padding: 7px;
     border: none;
     border-radius: 5px;
