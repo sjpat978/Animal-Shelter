@@ -9,20 +9,20 @@ html{
     display: grid;
     justify-items: center;
     align-items: center;
-    background-color: #3a3a3a;
+    background-color: #FFB6C1;
   }
   
   /* White rectangle in the middle of the screen */
   
   #main-holder {
-    width: 50%;
+    width: 70%;
     height: 70%;
     display: grid;
     justify-items: center;
     align-items: center;
-    background-color: white;
+    background-color: #FFE4E1;  
     border-radius: 7px;
-    box-shadow: 0px 0px 5px 2px black;
+    box-shadow: 0px 0px 5px 2px #FFF0F5;
   }
   
   /* -------------------------------------------------------------- */
@@ -93,7 +93,7 @@ html{
   /* Style the login button */
   
   #login-form-submit {
-    width: 100%;
+    width: 80%;
     padding: 7px;
     border: none;
     border-radius: 5px;
