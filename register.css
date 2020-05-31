@@ -70,4 +70,6 @@ h2 {
     outline: none;
     border-radius: 30px;
 }
-
+.submitbtn:hover {
+    color: darkgrey;
+}
