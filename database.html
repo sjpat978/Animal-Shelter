@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Animal Shelter Site</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type = "text/css" href="assets\css\main.css" />
+    </head>
+
+
+    <script>
+        let sortDirection = false;
+
+        let animalData = [
+            {animalType: 'Dog', name:'Sparky', age:4, ID:19234, breed: 'saint bernard', medicationsNeed: 'none', taken:'not applicable' },
+            {animalType: 'Dog', name:'Sparky', age:4, ID:19234, breed: 'saint bernard', medicationsNeed: 'none', taken:'not applicable' },
+            {animalType: 'Dog', name:'Sparky', age:4, ID:19234, breed: 'saint bernard', medicationsNeed: 'none', taken:'not applicable' },
+            {animalType: 'Dog', name:'Sparky', age:4, ID:19234, breed: 'saint bernard', medicationsNeed: 'none', taken:'not applicable' },
+            ]
+    
+        window.onload = () => {
+            loadTableData(animalData);
+        }
+
+        function loadTableData(data){
+            const tableBody = document.getElementById('database-data');
+            let dataHTML = '';
+            for(let animal of data){
+            dataHTML += `<tr><td>${animal.animalType}</td>
+                    <td>${animal.name}</td> 
+                    <td>${animal.age}</td>
+                    <td>${animal.ID}</td>
+                    <td>${animal.breed}</td>
+                    <td>${animal.medicationsNeed}</td>
+                    <td>${animal.taken}</td>
+                    </tr>`
+            }
+
+            console.log(dataHTML);
+
+            tableBody.innerHTML = dataHTML;
+        }
+    </script>
+    <body>
+        <section id="header" class="wrapper" style = "height: 10em;">
+
+            <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li class="current"><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="#">Customers</a>
+                            <ul>
+                                <li><a href="login.html">Log in!</a></li>
+                                <li><a href="register.html">Register</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Staff</a>
+                            <ul>
+                                <li><a href="login_staff.html">Log in!</a></li>
+                                <li><a href="register_staff.html">Register!</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+        </section>
+        <section class="wrapper" style ="padding: 2em 0 2em 0; margin: 0 0 1em 0;">
+            
+            <h1 class="database-location">Location: Walnut Creek Shelter</h1>
+        </section>
+
+        <section class="wrapper" style="padding: 2em 0 2em 0;">
+            <div class="data-rect">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Animal Type</td>
+                            <td>Name</td>
+                            <td>Age</td>
+                            <td>ID</td>
+                            <td>Breed</td>
+                            <td>Medications Needed</td>
+                            <td>Medications Taken</td>
+                        </tr>
+                    </thead>
+
+                    <tbody id="database-data">
+                        <tr>
+                            <td>Dog</td>
+                            <td>Sparky</td>
+                            <td>4</td>
+                            <td>19382</td>
+                            <td>Saint Bernard</td>
+                            <td>None</td>
+                            <td>Not Applicable</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <form>
+                            <td><input></td>
+                        </form>
+                    </tfoot>
+                </table>
+
+                <button class = "database-addbtn" id='database-addbtn'>
+                    <a>Add New Animal</a>
+                </button>
+                <button class="database-removebtn" id="database-removebtn"> 
+                    <a>Remove Animal</a>
+                </button>
+            </div>
+        </section>
+    </body>

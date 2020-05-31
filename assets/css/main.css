@@ -2107,6 +2107,8 @@ input, select, textarea {
 			font-size: 0.9em;
 		}
 
+
+
 /* Nav */
 
 	#nav {
@@ -2983,3 +2985,74 @@ input, select, textarea {
 						}
 
 	}
+
+/* Database Buttons */
+
+.database-location {
+	font-size: 48px;
+	font-weight: 50;
+	margin-left: 40px;
+	margin-bottom: 40px;
+	
+}
+
+.database-addbtn, .database-removebtn {
+	border-radius: 15px;
+	border-color: rgb(10, 2, 2);
+	border: 1px solid;
+	font-size: 14px;
+	letter-spacing: 2.5px;
+	font-weight:500;
+	background-color: #fff;
+	text-align:center;
+	
+}
+
+.database-addbtn a, .database-removebtn a {
+	text-decoration: none;
+	color: #000;
+
+}
+
+.database-addbtn:hover {
+	background-color: #4ee68b;
+}
+
+.data-rect {
+	background-color: #6797cf;
+	box-shadow: beige;
+	border: .5px solid rgb(66, 71, 77);
+	border-radius: 10px;
+	margin: 0 30px 0 30px;
+	padding: 10px 10px;
+}
+
+.data-rect table {
+	border-collapse: collapse;
+	letter-spacing: 1px;
+	font-size: 18px;
+	color: #000;
+}
+
+.data-rect thead{
+	background-color: #dbdcdf;
+}
+
+.data-rect tbody tr:nth-child(even){
+	background-color: #dbdcdf;
+}
+
+.data-rect tbody tr:nth-child(odd){
+	background-color: #fff;
+}
+
+.data-rect td:first-child {
+	padding-left: 40px;
+	border-radius: 10px;
+}
+
+.data-rect td,
+.data-rect th {
+	border: 1px solid;
+	padding: 10px 20px;
+}
