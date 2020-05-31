@@ -2002,7 +2002,7 @@ input, select, textarea {
 			}
 
 		.wrapper.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: black;
 			color: #eee;
 			color: rgba(255, 255, 255, 0.75);
 		}
@@ -2061,7 +2061,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		font-color
 		background-size: cover;
 		padding: 0;
 	}
@@ -2139,8 +2139,8 @@ input, select, textarea {
 
 				#nav > ul > li > a, #nav > ul > li > span {
 					display: block;
-					color: #eee;
-					color: rgba(255, 255, 255, 0.75);
+					color: black;
+					color: black;
 					text-transform: uppercase;
 					text-decoration: none;
 					font-size: 0.7em;
@@ -2156,16 +2156,16 @@ input, select, textarea {
 				}
 
 				#nav > ul > li:hover > a {
-					color: #fff;
+					color:black;
 				}
 
 				#nav > ul > li.active > a, #nav > ul > li.active > span {
-					color: #fff;
+					color:black;
 				}
 
 	.dropotron {
-		background: #222835 url("images/overlay.png");
-		background-color: rgba(44, 50, 63, 0.925);
+		background: #fff;
+		background-color: #fff;
 		padding: 1.25em 1em 1.25em 1em;
 		border-radius: 0.35em;
 		box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
@@ -2189,8 +2189,8 @@ input, select, textarea {
 			-ms-transition: all .25s ease-in-out;
 			transition: all .25s ease-in-out;
 			display: block;
-			color: #eee;
-			color: rgba(255, 255, 255, 0.75);
+			color: black;
+			color: black;
 			text-transform: uppercase;
 			text-decoration: none;
 			font-size: 0.7em;
@@ -2274,14 +2274,14 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #282b34 url("images/overlay.png");
-		color: #eee;
-		color: rgba(255, 255, 255, 0.5);
+		background: #fff;
+		color: black;
+		color: black;
 		padding-bottom: 6em;
 	}
 
 		#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b, #footer a {
-			color: #fff;
+			color: black;
 		}
 
 		#footer hr {
@@ -2294,7 +2294,7 @@ input, select, textarea {
 		#footer form input[type="password"],
 		#footer form select,
 		#footer form textarea {
-			background: #ccc;
+			background: grey;
 			box-shadow: none;
 		}
 
@@ -2303,7 +2303,7 @@ input, select, textarea {
 			#footer form input[type="password"]:focus,
 			#footer form select:focus,
 			#footer form textarea:focus {
-				background: #fff;
+				background: black;
 			}
 
 		#footer input[type="button"],
@@ -2311,8 +2311,8 @@ input, select, textarea {
 		#footer input[type="reset"],
 		#footer button,
 		#footer .button {
-			color: #fff;
-			box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.5);
+			color: black;
+			box-shadow: inset 0px 0px 2px 0px black;
 		}
 
 			#footer input[type="button"]:hover,
@@ -2320,8 +2320,8 @@ input, select, textarea {
 			#footer input[type="reset"]:hover,
 			#footer button:hover,
 			#footer .button:hover {
-				color: #fff;
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.65);
+				color: black;
+				box-shadow: inset 0px 0px 2px 0px black;
 			}
 
 			#footer input[type="button"]:active,
@@ -2329,7 +2329,7 @@ input, select, textarea {
 			#footer input[type="reset"]:active,
 			#footer button:active,
 			#footer .button:active {
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
+				box-shadow: inset 0px 0px 2px 0px black;
 			}
 
 			#footer input[type="button"].style2:active,
@@ -2337,22 +2337,22 @@ input, select, textarea {
 			#footer input[type="reset"].style2:active,
 			#footer button.style2:active,
 			#footer .button.style2:active {
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
+				box-shadow: inset 0px 0px 2px 0px black;
 			}
 
 		#footer .title {
-			background: #282b34 url("images/overlay.png");
-			color: #eee;
+			background:white;
+			color: black;
 		}
 
 		#footer header.style1 {
 			padding-bottom: 6em;
 			margin-bottom: 6em;
-			border-bottom: solid 1px rgba(255, 255, 255, 0.05);
+			border-bottom: solid 1px black;
 		}
 
 			#footer header.style1 h2 {
-				color: #fff;
+				color: black;
 			}
 
 			#footer header.style1 .p {
@@ -2364,11 +2364,11 @@ input, select, textarea {
 		}
 
 			#footer .feature-list section {
-				border-top-color: rgba(255, 255, 255, 0.05);
+				border-top-color: black;
 			}
 
 			#footer .feature-list h3:before {
-				background: #3d4249 url("images/overlay.png");
+				background:#fff;
 			}
 
 /* Copyright */
@@ -2384,8 +2384,8 @@ input, select, textarea {
 			display: inline-block;
 			border-radius: 0.35em;
 			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.05);
-			color: #aaa;
-			color: rgba(255, 255, 255, 0.25);
+			color: black;
+			color: black;
 			padding: 0.75em 2em;
 			font-size: 0.9em;
 		}
@@ -2985,6 +2985,7 @@ input, select, textarea {
 						}
 
 	}
+<<<<<<< HEAD
 
 /* Database Buttons */
 
@@ -3056,3 +3057,6 @@ input, select, textarea {
 	border: 1px solid;
 	padding: 10px 20px;
 }
+=======
+	}
+>>>>>>> 1f04d17b05ad78beb28c5df9798cf25d98e7148b
