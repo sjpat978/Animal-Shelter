@@ -2989,34 +2989,8 @@ input, select, textarea {
 
 /* Database Buttons */
 
-.database-location {
-	font-size: 48px;
-	font-weight: 50;
-	margin-left: 40px;
-	margin-bottom: 40px;
-	
-}
-
-.database-addbtn, .database-removebtn {
-	border-radius: 15px;
-	border-color: rgb(10, 2, 2);
-	border: 1px solid;
-	font-size: 14px;
-	letter-spacing: 2.5px;
-	font-weight:500;
-	background-color: #fff;
-	text-align:center;
-	
-}
-
-.database-addbtn a, .database-removebtn a {
-	text-decoration: none;
-	color: #000;
-
-}
-
-.database-addbtn:hover {
-	background-color: #4ee68b;
+.database-addbtn {
+	display: 
 }
 
 .data-rect {

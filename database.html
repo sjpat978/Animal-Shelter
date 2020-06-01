@@ -3,7 +3,8 @@
 	<head>
 		<title>Animal Shelter Site</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <script src="https://kit.fontawesome.com/083cad359a.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type = "text/css" href="assets\css\main.css" />
     </head>
 
@@ -76,6 +77,7 @@
                 <table>
                     <thead>
                         <tr>
+                            
                             <td>Animal Type</td>
                             <td>Name</td>
                             <td>Age</td>
@@ -97,7 +99,7 @@
                             <td>Not Applicable</td>
                         </tr>
                     </tbody>
-                    <tfoot>
+                    <tfoot style="display: none;">
                         <form>
                             <td><input type='text' class="database-add-form" placeholder ="Animal Type" style='width:150px;'></td>
                             <td><input type='text' class="database-add-form" placeholder = "Animal Name" style="width:150px;"></td>
@@ -105,17 +107,21 @@
                             <td><input type="text" class="database-add-form" placeholder = "ID Number" style="width:100px;"></td>
                             <td><input type="text" class="database-add-form" placeholder ="Breed" style="width:200px;"></td>
                             <td><input type="text" class="database-add-form" placeholder = "Medications" style="width: 400px;"></td>
-                            <td><input type="text" class="database-add-form" style="width: 50px;"></td>
+                            <td><input type="radio" name="meds-taken" value="Yes">Yes
+                                <input type="radio" name="meds-taken" value="No">No<br>
+                                <input type="radio" name="meds-taken" value="N/A">N/A</td>
                         </form>
                     </tfoot>
                 </table>
 
-                <button class = "database-addbtn" id='database-addbtn'>
+                <button class="database-addbtn" id="database-addbtn"><i class="fas fa-plus-circle"></i></button>
+
+                <!--<button class = "database-addbtn" id='database-addbtn'>
                     <a>Add New Animal</a>
                 </button>
                 <button class="database-removebtn" id="database-removebtn"> 
                     <a>Remove Animal</a>
-                </button>
+                </button>-->
             </div>
         </section>
 
