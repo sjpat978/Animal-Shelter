@@ -46,7 +46,7 @@ document.getElementById('database-addbtn').addEventListener('click', () => {
     console.log('add button clicked')
     const tableFoot = document.getElementById('database-data')
     let formHTML = '';
-    
+
      
 });
 

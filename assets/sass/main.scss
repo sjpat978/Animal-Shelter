@@ -122,7 +122,7 @@
 	}
 
 	body, input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Josefin Sans', sans-serif;
 		font-weight: 400;
 		color: #919499;
 		font-size: 14pt;
@@ -807,7 +807,7 @@
 		@include vendor('justify-content', 'center');
 		position: relative;
 		height: 24em;
-		background: url('../../images/banner.jpg') center center;
+		background: url('images\banner.jpg') center center;
 		background-size: cover;
 		padding: 0;
 
