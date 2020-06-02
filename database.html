@@ -1,136 +1,234 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Animal Shelter Site</title>
-		<meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <script src="https://kit.fontawesome.com/083cad359a.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" type = "text/css" href="assets\css\main.css" />
-    </head>
+
+<head>
+    <title>Animal Shelter Site</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://kit.fontawesome.com/083cad359a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets\css\main.css" />
+</head>
 
 
+
+<body>
+    <section id="header" class="wrapper" style="height: 10em;">
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Customers</a>
+                    <ul>
+                        <li><a href="login.html">Log in!</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Staff</a>
+                    <ul>
+                        <li><a href="login_staff.html">Log in!</a></li>
+                        <li><a href="register_staff.html">Register!</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </section>
+    <section class="wrapper" style="padding: 2em 0 2em 0; margin: 0 0 1em 0;">
+
+        <h1 class="database-location">Location: Walnut Creek Shelter</h1>
+    </section>
+
+    <section class="wrapper" style="padding: 2em 0 2em 0;">
+        <div class="data-rect">
+            <table>
+                <thead>
+                    <tr>
+
+                        <td>Animal Type</td>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>ID</td>
+                        <td>Breed</td>
+                        <td>Medications Needed</td>
+                        <td>Medications Taken</td>
+                    </tr>
+                </thead>
+
+                <tbody id="database-data">
+                    <tr>
+                        <td>Dog</td>
+                        <td>Sparky</td>
+                        <td>4</td>
+                        <td>19382</td>
+                        <td>Saint Bernard</td>
+                        <td>None</td>
+                        <td>Not Applicable</td>
+                    </tr>
+                </tbody>
+                <tfoot id="database-footer" style="display: none;">
+                    <form>
+                        <td><input type='text' class="database-add-form" id='animal-type-form' placeholder="Animal Type"
+                                style='width:150px;'></td>
+                        <td><input type='text' class="database-add-form" id='name-form' placeholder="Animal Name"
+                                style="width:150px;"></td>
+                        <td><input type='text' class="database-add-form" id='age-form' placeholder="Age"
+                                style="width:50px;"></td>
+                        <td><input type="text" class="database-add-form" id='IDnumber-form' placeholder="ID Number"
+                                style="width:100px;"></td>
+                        <td><input type="text" class="database-add-form" id='breed-form' placeholder="Breed"
+                                style="width:200px;"></td>
+                        <td><input type="text" class="database-add-form" id='medications-form' placeholder="Medications"
+                                style="width: 400px;"></td>
+                        <td><input type="radio" name="meds-taken" value="Yes">Yes
+                            <input type="radio" name="meds-taken" value="No">No<br>
+                            <input type="radio" name="meds-taken" value="N/A">N/A</td>
+                    </form>
+                </tfoot>
+            </table>
+            <a class="database-addbtn" id="database-addbtn"><i class="fas fa-plus-circle"></i></a>
+            <a class="database-removebtn" id="database-removebtn"><i class="fas fa-minus-circle"></i></a>
+            <a class="database-addAnimalbtn" id="addAnimalbtn">
+                <p>Add Animal</p>
+            </a>
+            <a class="database-cancelbtn" id="database-cancelbtn">
+                <p>Cancel</p>
+            </a>
+        </div>
+    </section>
     <script>
         let sortDirection = false;
 
-        let animalData = [
-            {animalType: 'Dog', name:'Sparky', age:4, ID:19234, breed: 'saint bernard', medicationsNeed: 'none', taken:'not applicable' },
-            {animalType: 'Dog', name:'Sparky', age:4, ID:19234, breed: 'saint bernard', medicationsNeed: 'none', taken:'not applicable' },
-            {animalType: 'Dog', name:'Sparky', age:4, ID:19234, breed: 'saint bernard', medicationsNeed: 'none', taken:'not applicable' },
-            {animalType: 'Dog', name:'Sparky', age:4, ID:19234, breed: 'saint bernard', medicationsNeed: 'none', taken:'not applicable' },
-            ]
-    
+        let animalData = [{
+                animalType: 'Dog',
+                name: 'Sparky',
+                age: 4,
+                ID: 19234,
+                breed: 'saint bernard',
+                medicationsNeed: 'none',
+                taken: 'not applicable'
+            },
+            {
+                animalType: 'Dog',
+                name: 'Sparky',
+                age: 4,
+                ID: 19234,
+                breed: 'saint bernard',
+                medicationsNeed: 'none',
+                taken: 'not applicable'
+            },
+            {
+                animalType: 'Dog',
+                name: 'Sparky',
+                age: 4,
+                ID: 19234,
+                breed: 'saint bernard',
+                medicationsNeed: 'none',
+                taken: 'not applicable'
+            },
+            {
+                animalType: 'Dog',
+                name: 'Sparky',
+                age: 4,
+                ID: 19234,
+                breed: 'saint bernard',
+                medicationsNeed: 'none',
+                taken: 'not applicable'
+            },
+        ]
+        class Animal {
+            constructor(type, name, age, ID, breed, medNeed) {
+                this.animalType = type;
+                this.name = name;
+                this.age = age;
+                this.ID = ID;
+                this.breed = breed;
+                this.medicationsNeed = medNeed;
+            }
+        }
         window.onload = () => {
             loadTableData(animalData);
         }
 
-        function loadTableData(data){
+        function loadTableData(data) {
             const tableBody = document.getElementById('database-data');
             let dataHTML = '';
-            for(let animal of data){
-            dataHTML += `<tr><td>${animal.animalType}</td>
-                    <td>${animal.name}</td> 
-                    <td>${animal.age}</td>
-                    <td>${animal.ID}</td>
-                    <td>${animal.breed}</td>
-                    <td>${animal.medicationsNeed}</td>
-                    <td>${animal.taken}</td>
-                    </tr>`
+            for (let animal of data) {
+                dataHTML += `<tr><td>${animal.animalType}</td>
+                        <td>${animal.name}</td> 
+                        <td>${animal.age}</td>
+                        <td>${animal.ID}</td>
+                        <td>${animal.breed}</td>
+                        <td>${animal.medicationsNeed}</td>
+                        <td>${animal.taken}</td>
+                        </tr>`
             }
 
-            console.log(dataHTML);
+            //console.log(dataHTML);
 
             tableBody.innerHTML = dataHTML;
         }
+
+        document.getElementById('database-addbtn').addEventListener('click', () => {
+            console.log('add button clicked')
+            const tableFoot = document.getElementById('database-footer')
+            const addBtns = [document.getElementById('addAnimalbtn'), document.getElementById(
+                'database-cancelbtn')]
+            tableFoot.style.display = "";
+            for (let i = 0; i < addBtns.length; i++) {
+                addBtns[i].style.display = "inline-block";
+            }
+        });
+        document.getElementById('database-cancelbtn').addEventListener('click', () => {
+            const tableFoot = document.getElementById('database-footer')
+            const addBtns = [document.getElementById('addAnimalbtn'), document.getElementById(
+                'database-cancelbtn')]
+            tableFoot.style.display = "none";
+            for (let i = 0; i < addBtns.length; i++) {
+                addBtns[i].style.display = "none";
+            }
+        });
+
+        document.getElementById('addAnimalbtn').addEventListener('click', () => {
+            console.log('New Animal Added!')
+            let animalType = document.getElementById('animal-type-form').value
+            let animalName = document.getElementById('name-form').value
+            let animalAge = document.getElementById('age-form').value
+            let animalID = document.getElementById('IDnumber-form').value
+            let animalBreed = document.getElementById('breed-form').value
+            let meds = document.getElementById('medications-form').value
+
+            const newAnimal = new Animal(animalType, animalName, animalAge, animalID, animalBreed, meds)
+            loadDataform(newAnimal)
+            const tableFoot = document.getElementById('database-footer')
+            const addBtns = [document.getElementById('addAnimalbtn'), document.getElementById(
+                'database-cancelbtn')]
+            tableFoot.style.display = "none";
+            for (let i = 0; i < addBtns.length; i++) {
+                addBtns[i].style.display = "none";
+            }
+        });
+
+        function loadDataform(Animal) {
+            const tableBody = document.getElementById('database-data');
+            let dataHTML = '<tr>';
+            for (let property in Animal) {
+                dataHTML += `<td>${property}</td>`
+            }
+            dataHTML += "</tr>"
+
+            console.log(dataHTML)
+            tableBody.innerHTML = dataHTML
+        }
     </script>
-    <body>
-        <section id="header" class="wrapper" style = "height: 10em;">
-
-            <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li class="current"><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="#">Customers</a>
-                            <ul>
-                                <li><a href="login.html">Log in!</a></li>
-                                <li><a href="register.html">Register</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Staff</a>
-                            <ul>
-                                <li><a href="login_staff.html">Log in!</a></li>
-                                <li><a href="register_staff.html">Register!</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-
-        </section>
-        <section class="wrapper" style ="padding: 2em 0 2em 0; margin: 0 0 1em 0;">
-            
-            <h1 class="database-location">Location: Walnut Creek Shelter</h1>
-        </section>
-
-        <section class="wrapper" style="padding: 2em 0 2em 0;">
-            <div class="data-rect">
-                <table>
-                    <thead>
-                        <tr>
-                            
-                            <td>Animal Type</td>
-                            <td>Name</td>
-                            <td>Age</td>
-                            <td>ID</td>
-                            <td>Breed</td>
-                            <td>Medications Needed</td>
-                            <td>Medications Taken</td>
-                        </tr>
-                    </thead>
-
-                    <tbody id="database-data">
-                        <tr>
-                            <td>Dog</td>
-                            <td>Sparky</td>
-                            <td>4</td>
-                            <td>19382</td>
-                            <td>Saint Bernard</td>
-                            <td>None</td>
-                            <td>Not Applicable</td>
-                        </tr>
-                    </tbody>
-                    <tfoot style="display: none;">
-                        <form>
-                            <td><input type='text' class="database-add-form" placeholder ="Animal Type" style='width:150px;'></td>
-                            <td><input type='text' class="database-add-form" placeholder = "Animal Name" style="width:150px;"></td>
-                            <td><input type='text' class="database-add-form" placeholder = "Age" style="width:50px;"></td>
-                            <td><input type="text" class="database-add-form" placeholder = "ID Number" style="width:100px;"></td>
-                            <td><input type="text" class="database-add-form" placeholder ="Breed" style="width:200px;"></td>
-                            <td><input type="text" class="database-add-form" placeholder = "Medications" style="width: 400px;"></td>
-                            <td><input type="radio" name="meds-taken" value="Yes">Yes
-                                <input type="radio" name="meds-taken" value="No">No<br>
-                                <input type="radio" name="meds-taken" value="N/A">N/A</td>
-                        </form>
-                    </tfoot>
-                </table>
-
-                <button class="database-addbtn" id="database-addbtn"><i class="fas fa-plus-circle"></i></button>
-
-                <!--<button class = "database-addbtn" id='database-addbtn'>
-                    <a>Add New Animal</a>
-                </button>
-                <button class="database-removebtn" id="database-removebtn"> 
-                    <a>Remove Animal</a>
-                </button>-->
-            </div>
-        </section>
-
-        <script src="assets\js\jquery.min.js"></script>
-        <script src="assets\js\jquery.dropotron.min.js"></script>
-        <script src="assets\js\browser.min.js"></script>
-        <script src="assets\js\breakpoints.min.js"></script>
-        <script src="assets\js\util.js"></script>
-        <script src="assets\js\main.js"></script>
-    </body>
+    <script src="assets\js\jquery.min.js"></script>
+    <script src="assets\js\jquery.dropotron.min.js"></script>
+    <script src="assets\js\browser.min.js"></script>
+    <script src="assets\js\breakpoints.min.js"></script>
+    <script src="assets\js\util.js"></script>
+    <script src="assets\js\main.js"></script>
+</body>
 
 </html>
