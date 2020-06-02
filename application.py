@@ -53,11 +53,10 @@ def register():
             return render_template("error.html", message="Must provide Last Name")
         elif  not request.form.get("email"):
             return render_template("error.html", message="Must provide E-mail")
-        elif not request.form.get("password1") or not request.form.get("password2"):
+        elif not request.form.get("password1"):
             return render_template("error.html", message="Must provide password")
-        elif request.form.get("password1") != request.form.get("password2"):
+        elif request.form.get("password1_2") != request.form.get("password2"):
             return render_template("error.html", message="Password does not match")
-        ## end validation
         else :
             ## assign to variables
             first_name = request.form.get("first_name")
@@ -85,30 +84,27 @@ def register():
 
     else:
         #if form values are empty show error
-        if not request.form.get("first_name_2"):
+        if not request.form.get("first_name2"):
             return render_template("error.html", message="Must provide First Name")
-        elif not request.form.get("last_name_2"):
+        elif not request.form.get("last_name2"):
             return render_template("error.html", message="Must provide Last Name")
-        elif  not request.form.get("email_2"):
+        elif  not request.form.get("email2"):
             return render_template("error.html", message="Must provide E-mail")
-        elif not request.form.get("password1_2") or not request.form.get("password2"):
+        elif not request.form.get("password1") or not request.form.get("password2"):
             return render_template("error.html", message="Must provide password")
-        elif request.form.get("password1_2") != request.form.get("password2"):
+        elif request.form.get("password1") != request.form.get("password2"):
             return render_template("error.html", message="Password does not match")
-        if not request.form.get("shelter_2"):
-            return render_template("error.html", message="Must provide shelter name")
         ## end validation
         else :
             ## assign to variables
-            first_name_2 = request.form.get("first_name_2")
-            last_name_2 = request.form.get("last_name_2")
-            email_2 = request.form.get("email_2")
-            password_2 = request.form.get("password1_2")
-            shelter_2 = request.form.get("shelter_2")
+            first_name2 = request.form.get("first_name2")
+            last_name2 = request.form.get("last_name2")
+            email2 = request.form.get("email2")
+            password2 = request.form.get("password1")
             # try to commit to database, raise error if any
             try:
-                db.execute("INSERT INTO users_staff (firstname2, lastname2, email2, password2, shelter2) VALUES (:firstname2, :lastname2, :email2, :password2, :shelter2)",
-                               {"firstname2": first_name_2, "lastname2": last_name_staff, "email2":email, "password2": generate_password_hash(password), "shelter2": shelter_staff})
+                db.execute("INSERT INTO users_staff (firstname2, lastname2, email2, password2) VALUES (:firstname2, :lastname2, :email2, :password2)",
+                               {"firstname2": first_name2, "lastname2": last_name2, "email2":email2, "password2": generate_password_hash(password2)})
             except Exception as e:
                 return render_template("error.html", message=e)
 
@@ -189,6 +185,66 @@ def login():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("login.html")
+
+@app.route("/logout")
+@login_required
+def logout():
+    # Forget any user_id
+    session.clear()
+
+    # Redirect user to login index
+    return redirect(url_for("index"))
+
+@app.route("/search_illinois", methods=["GET","POST"])
+@login_required
+def search():
+    if request.method == "GET":
+        return render_template("search_illinois.html")
+    else:
+        query = request.form.get("input-search")
+        if query is None:
+            return render_template("error.html", message="Search field can not be empty!")
+        try:
+            result = db.execute("SELECT * FROM illinois WHERE LOWER(AnimalBreed) LIKE :query OR LOWER(AnimalType) LIKE :query", {"query": "%" + query.lower() + "%"}).fetchall()
+        except Exception as e:
+            return render_template("error.html", message=e)
+        if not result:
+            return render_template("error.html", message="None found")
+        return render_template("list.html", result=result)
+
+@app.route("/search_arizona", methods=["GET","POST"])
+@login_required
+def search():
+    if request.method == "GET":
+        return render_template("search_arizona.html")
+    else:
+        query = request.form.get("input-search")
+        if query is None:
+            return render_template("error.html", message="Search field can not be empty!")
+        try:
+            result = db.execute("SELECT * FROM arizona WHERE LOWER(AnimalBreed) LIKE :query OR LOWER(AnimalType) LIKE :query", {"query": "%" + query.lower() + "%"}).fetchall()
+        except Exception as e:
+            return render_template("error.html", message=e)
+        if not result:
+            return render_template("error.html", message="None found")
+        return render_template("list.html", result=result)
+
+@app.route("/search_california", methods=["GET","POST"])
+@login_required
+def search():
+    if request.method == "GET":
+        return render_template("search_california.html")
+    else:
+        query = request.form.get("input-search")
+        if query is None:
+            return render_template("error.html", message="Search field can not be empty!")
+        try:
+            result = db.execute("SELECT * FROM california WHERE LOWER(AnimalBreed) LIKE :query OR LOWER(AnimalType) LIKE :query", {"query": "%" + query.lower() + "%"}).fetchall()
+        except Exception as e:
+            return render_template("error.html", message=e)
+        if not result:
+            return render_template("error.html", message="None found")
+        return render_template("list.html", result=result)
 
 
 
