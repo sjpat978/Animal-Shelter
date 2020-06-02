@@ -53,9 +53,9 @@ def register():
             return render_template("error.html", message="Must provide Last Name")
         elif  not request.form.get("email"):
             return render_template("error.html", message="Must provide E-mail")
-        elif not request.form.get("password1"):
+        elif not request.form.get("password1") or not request.form.get("password2"):
             return render_template("error.html", message="Must provide password")
-        elif request.form.get("password1_2") != request.form.get("password2"):
+        elif request.form.get("password1") != request.form.get("password2"):
             return render_template("error.html", message="Password does not match")
         else :
             ## assign to variables
@@ -73,44 +73,6 @@ def register():
             db.commit()
             return redirect(url_for("login"))
 
-@app.route("/register_staff", methods=["GET", "POST"])
-def register():
-
-    # if GET, show the registration form
-    if request.method == "GET":
-        return render_template("register_staff.html")
-
-    # if POST, validate and commit to database
-
-    else:
-        #if form values are empty show error
-        if not request.form.get("first_name2"):
-            return render_template("error.html", message="Must provide First Name")
-        elif not request.form.get("last_name2"):
-            return render_template("error.html", message="Must provide Last Name")
-        elif  not request.form.get("email2"):
-            return render_template("error.html", message="Must provide E-mail")
-        elif not request.form.get("password1") or not request.form.get("password2"):
-            return render_template("error.html", message="Must provide password")
-        elif request.form.get("password1") != request.form.get("password2"):
-            return render_template("error.html", message="Password does not match")
-        ## end validation
-        else :
-            ## assign to variables
-            first_name2 = request.form.get("first_name2")
-            last_name2 = request.form.get("last_name2")
-            email2 = request.form.get("email2")
-            password2 = request.form.get("password1")
-            # try to commit to database, raise error if any
-            try:
-                db.execute("INSERT INTO users_staff (firstname2, lastname2, email2, password2) VALUES (:firstname2, :lastname2, :email2, :password2)",
-                               {"firstname2": first_name2, "lastname2": last_name2, "email2":email2, "password2": generate_password_hash(password2)})
-            except Exception as e:
-                return render_template("error.html", message=e)
-
-            #success - redirect to login
-            db.commit()
-            return redirect(url_for("login_staff"))
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -149,42 +111,6 @@ def login():
     else:
         return render_template("login.html")
 
-@app.route("/login_staff", methods=["GET", "POST"])
-def login():
-
-    # Forget any user_id
-    session.clear()
-
-    if request.method == "POST":
-        form_email = request.form.get("email")
-        form_password = request.form.get("password")
-
-        # Ensure username and password was submitted
-        if not form_email:
-            return render_template("error.html", message="must provide username")
-        elif not form_password:
-            return render_template("error.html", message="must provide password")
-
-        # Query database for email and password
-        Q = db.execute("SELECT * FROM users WHERE email LIKE :email", {"email": form_email}).fetchone()
-
-        # User exists ?
-        if Q is None:
-            return render_template("error.html", message="User doesn't exists")
-        # Valid password ?
-        if not check_password_hash( Q.password, form_password):
-            return  render_template("error.html", message = "Invalid password")
-
-        # Remember which user has logged in
-        session["user_id"] = Q.userid
-        session["email"] = Q.email
-        session["firstname"] = Q.firstname
-        session["logged_in"] = True
-        return render_template("location_staff.html")
-
-    # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        return render_template("login.html")
 
 @app.route("/logout")
 @login_required
