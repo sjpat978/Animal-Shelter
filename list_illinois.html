@@ -38,7 +38,7 @@
     </section>
     <section class="wrapper" style="padding: 2em 0 2em 0; margin: 0 0 1em 0;">
 
-        <h1 class="database-location">Location: Walnut Creek Shelter</h1>
+        <h1 class="database-location">Location: Chicago Shelter</h1>
     </section>
 
     <section class="wrapper" style="padding: 2em 0 2em 0;">
@@ -47,55 +47,36 @@
                 <thead>
                     <tr>
 
-                        <td>Animal Type</td>
                         <td>Name</td>
+                        <td>Gender</td>
                         <td>Age</td>
-                        <td>ID</td>
                         <td>Breed</td>
+                        <td>Weight</td>
                         <td>Medications Needed</td>
-                        <td>Medications Taken</td>
+                        <td>Type</td>
                     </tr>
                 </thead>
 
                 <tbody id="database-data">
                     <tr>
-                        <td>Dog</td>
-                        <td>Sparky</td>
-                        <td>4</td>
-                        <td>19382</td>
-                        <td>Saint Bernard</td>
-                        <td>None</td>
-                        <td>Not Applicable</td>
+                        <td>{item.Name}</td>
+                        <td>{item.Gender}</td>
+                        <td>{item.Age}</td>
+                        <td>{item.Breed}</td>
+                        <td>{item.Weight}</td>
+                        <td>{item.Medications}</td>
+                        <td>{item.Type}</td>
                     </tr>
                 </tbody>
-                <tfoot id="database-footer" style="display: none;">
-                    <form>
-                        <td><input type='text' class="database-add-form" id='animal-type-form' placeholder="Animal Type"
-                                style='width:150px;'></td>
-                        <td><input type='text' class="database-add-form" id='name-form' placeholder="Animal Name"
-                                style="width:150px;"></td>
-                        <td><input type='text' class="database-add-form" id='age-form' placeholder="Age"
-                                style="width:50px;"></td>
-                        <td><input type="text" class="database-add-form" id='IDnumber-form' placeholder="ID Number"
-                                style="width:100px;"></td>
-                        <td><input type="text" class="database-add-form" id='breed-form' placeholder="Breed"
-                                style="width:200px;"></td>
-                        <td><input type="text" class="database-add-form" id='medications-form' placeholder="Medications"
-                                style="width: 400px;"></td>
-                        <td><input type="radio" name="meds-taken" value="Yes">Yes
-                            <input type="radio" name="meds-taken" value="No">No<br>
-                            <input type="radio" name="meds-taken" value="N/A">N/A</td>
-                    </form>
-                </tfoot>
             </table>
-            <a class="database-addbtn" id="database-addbtn"><i class="fas fa-plus-circle"></i></a>
+            <!--<a class="database-addbtn" id="database-addbtn"><i class="fas fa-plus-circle"></i></a>
             <a class="database-removebtn" id="database-removebtn"><i class="fas fa-minus-circle"></i></a>
             <a class="database-addAnimalbtn" id="addAnimalbtn">
                 <p>Add Animal</p>
             </a>
             <a class="database-cancelbtn" id="database-cancelbtn">
                 <p>Cancel</p>
-            </a>
+            </a>-->
         </div>
     </section>
     <script>
@@ -199,7 +180,6 @@
             let animalID = document.getElementById('IDnumber-form').value
             let animalBreed = document.getElementById('breed-form').value
             let meds = document.getElementById('medications-form').value
-
             const newAnimal = new Animal(animalType, animalName, animalAge, animalID, animalBreed, meds)
             loadDataform(newAnimal)
             const tableFoot = document.getElementById('database-footer')
