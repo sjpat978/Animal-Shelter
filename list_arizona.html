@@ -46,26 +46,26 @@
             <table>
                 <thead>
                     <tr>
-
+                        <td>ID</td>
                         <td>Name</td>
                         <td>Gender</td>
                         <td>Age</td>
                         <td>Breed</td>
                         <td>Weight</td>
-                        <td>Medications Needed</td>
+                        <td>Needs</td>
                         <td>Type</td>
                     </tr>
                 </thead>
 
                 <tbody id="database-data">
                     <tr>
-                        <td>{item.Name}</td>
-                        <td>{item.Gender}</td>
-                        <td>{item.Age}</td>
-                        <td>{item.Breed}</td>
-                        <td>{item.Weight}</td>
-                        <td>{item.Medications}</td>
-                        <td>{item.Type}</td>
+                        <td>{{item.ID}}</td>
+                        <td>{{item.AnimalName}}</td>
+                        <td>{{item.Gender}}</td>
+                        <td>{{item.Age}}</td>
+                        <td>{{item.Breed}}</td>
+                        <td>{{item.Needs}}</td>
+                        <td>{{item.AnimalType}}</td>
                     </tr>
                 </tbody>
             </table>

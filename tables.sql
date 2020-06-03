@@ -13,28 +13,31 @@ CREATE TABLE users_staff (
   password2 VARCHAR NOT NULL,
   shelter VARHCAR NOT NULL,
 );
-CREATE TABLE illinois (
-    AnimalType SERIAL PRIMARY KEY,
-    AnimalBreed VARCHAR NOT NULL,
+CREATE TABLE arizona (
+    ID SERIAL PRIMARY KEY,
     AnimalName VARCHAR NOT NULL,
-    Age INTEGER NOT NULL,
+    Age INTEGER NOT NULL, 
+    Gender VARCHAR NOT NULL,
+    Breed VARCHAR  NOT NULL,
+    AnimalType VARCHAR NOT NULL,
     Needs VARCHAR NOT NULL,
 );
 
-CREATE TABLE arizona (
-    AnimalID SERIAL PRIMARY KEY,
-    AnimalType VARCHAR  NOT NULL,
-    AnimalBreed VARCHAR NOT NULL,
-    AnimalName VARCHAR NOT NULL,
+CREATE TABLE illinois (
+    ID SERIAL PRIMARY KEY,
+    AnimalName VARCHAR  NOT NULL,
     Age INTEGER NOT NULL,
+    AnimalWeight INTEGER NOT NULL, 
+    Gender VARCHAR NOT NULL,
+    Breed VARCHAR NOT NULL,
+    AnimalType VARCHAR NOT NULL,
     Needs VARCHAR NOT NULL,
 );
 
 CREATE TABLE california (
-    AnimalID SERIAL PRIMARY KEY,
-    AnimalType VARCHAR  NOT NULL,
-    AnimalBreed VARCHAR NOT NULL,
-    AnimalName VARCHAR NOT NULL,
+    Type SERIAL PRIMARY KEY,
+    Breed VARCHAR NOT NULL,
+    Name VARCHAR NOT NULL,
     Age INTEGER NOT NULL,
     Needs VARCHAR NOT NULL,
 );
