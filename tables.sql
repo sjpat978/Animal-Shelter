@@ -14,8 +14,7 @@ CREATE TABLE users_staff (
   shelter VARHCAR NOT NULL,
 );
 CREATE TABLE illinois (
-    AnimalID SERIAL PRIMARY KEY,
-    AnimalType VARCHAR  NOT NULL,
+    AnimalType SERIAL PRIMARY KEY,
     AnimalBreed VARCHAR NOT NULL,
     AnimalName VARCHAR NOT NULL,
     Age INTEGER NOT NULL,
