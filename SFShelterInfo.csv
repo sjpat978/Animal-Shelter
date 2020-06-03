@@ -1,6 +1,6 @@
 DOGS:,,,,
-Name,Age,Type,Weight (in lbs.),Gender,Breed
-Clay,7y,Dog,48,Male,"Mix Terrier, Pit Bull"
+Name,Age,Weight (in lbs.),Gender,Breed
+Clay,7y,48,Male,"Mix Terrier, Pit Bull"
 Dudley,1y,61,Male,Mix Shepherd
 Rocky,1y,8,Male,Miniature Pinscher Mix
 Pablo,8y,22,Male,"Chihuahua, Short Coat Mix"
