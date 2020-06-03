@@ -4,7 +4,7 @@ html{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-body {
+body {w
     background-image: url(images/register-background.jpg);
     height: 100%;
     widows: 100%;
@@ -16,7 +16,7 @@ body {
 
 .boxthing {
     width: 480px;
-    height: 600px;
+    height: 580px;
     position: fixed;
     top: 10%;
     left: 20%;
