@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" type = "text/css" href="assets\css\main.css" />
+		<link rel = "stylesheet" href = "starter.css"/>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -15,14 +16,14 @@
 					<!-- Logo -->
 						<div id="logo">
 							<h1><a href="index.html">
-								<a style="color:#000">Tech for Tails</a></h1>
+								<a style="color:#000" class = "header-title fade-in">Tech for Tails</a></h1>
 							
 						</div>
 
 					<!-- Nav -->
 					<div>
 						<nav id="nav">
-							<ul>
+							<ul class = "fade-in">
 								<li class="current"><a href="index.html">Home</a></li>
 								<li>
 									<a href="#">Customers</a>
@@ -45,8 +46,8 @@
 
 			<!-- Intro -->
 				<section id="intro" class="wrapper style1">
-					<div class="title">The Introduction</div>
-					<div class="container">
+					<div class="title fade-in">The Introduction</div>
+					<div class="container fade-in">
 						<p class="style2">
 							Animal Shelter Site is a free service for both customers and animal shelter staff! 
 						</p>
@@ -64,32 +65,32 @@
 
 					<!-- Image -->
 						<a href="#" class="image featured">
-							<img src="images/pic01.png" alt="" />
+							<img src="images/pic01.png" class = "from-left left-selector" alt="" />
 						</a>
 
 					<!-- Features -->
 					<section id="features">
 						<div class="feature-list">
 							<div class="row">
-								<div class="col-6 col-12-medium">
+								<div class="col-6 col-12-medium fade-in">
 									<section>
 										<h3 class="icon fa-comment">Communicate</h3>
 										<p>Customers can communicate with staff about any concerns or questions they have.</p>
 									</section>
 								</div>
-								<div class="col-6 col-12-medium">
+								<div class="col-6 col-12-medium fade-in">
 									<section>
 										<h3 class="icon solid fa-sync">Up-to-Date</h3>
 										<p>Staff can update and add new information to the adoption database.</p>
 									</section>
 								</div>
-								<div class="col-6 col-12-medium">
+								<div class="col-6 col-12-medium fade-in">
 									<section>
 										<h3 class="icon solid fa-check">Easy Access</h3>
 										<p>Customers and staff have easy access to animal profiles through our database.</p>
 									</section>
 								</div>
-								<div class="col-6 col-12-medium">
+								<div class="col-6 col-12-medium fade-in">
 									<section>
 										<h3 class="icon solid fa-cog">Personalization</h3>
 										<p>Customers can personalize their search results via our matching service</p>
@@ -97,7 +98,7 @@
 								</div>
 							</div>
 						</div>
-						<ul class="actions special">
+						<ul class="actions special fade-in">
 							<li><a href="register.html" class="button style1 large">Customers: Get Started</a></li>
 							<li><a href="register_staff.html" class="button style2 large">Shelter Staff: Get Started</a></li>
 						</ul>
@@ -107,7 +108,7 @@
 			</section>
 
 			<!-- Highlights -->
-				<section id="highlights" class="wrapper style3">
+				<section id="highlights" class="wrapper style3 fade-in">
 					<div class="title">States we currently serve</div>
 					<div class="container">
 						<div class="row aln-center">
@@ -147,7 +148,7 @@
 				<section id="footer" class="wrapper">
 					<div class="title">Questions?</div>
 					<div class="container">
-						<header class="style1">
+						<header class="style1 fade-in">
 							<h2>Feel free to leave your information below, and we will get back to you as soon as possible!</h2>
 						</header>
 						<div class="row">
@@ -155,7 +156,7 @@
 
 								<!-- Contact Form -->
 									<section>
-										<form method="post" action="#">
+										<form method="post" action="#" class = "fade-in">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-small">
 													<input type="text" name="name" id="contact-name" placeholder="Name" />
@@ -197,6 +198,6 @@
 			<script src="assets\js\breakpoints.min.js"></script>
 			<script src="assets\js\util.js"></script>
 			<script src="assets\js\main.js"></script>
-
+			<script src = "fadeIn.js"></script>
 	</body>
 </html>
