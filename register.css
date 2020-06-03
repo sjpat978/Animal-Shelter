@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+
 html{
     margin: 0;
     padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Josefin Sans', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body {
@@ -43,6 +45,7 @@ h2 {
     position: absolute;
     width: 280px;
     transition: .5s;
+    font-weight: 400;
     
 }
 
@@ -57,6 +60,7 @@ h2 {
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
+    font-weight: 400;
 
 }
 

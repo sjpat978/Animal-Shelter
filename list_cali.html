@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Animal Shelter Site</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://kit.fontawesome.com/083cad359a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets\css\main.css" />
+</head>
+
+
+
+<body>
+    <section id="header" class="wrapper" style="height: 10em;">
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Customers</a>
+                    <ul>
+                        <li><a href="login.html">Log in!</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Staff</a>
+                    <ul>
+                        <li><a href="login_staff.html">Log in!</a></li>
+                        <li><a href="register_staff.html">Register!</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </section>
+    <section class="wrapper" style="padding: 2em 0 2em 0; margin: 0 0 1em 0;">
+
+        <h1 class="database-location">Location: San Francisco Shelter</h1>
+    </section>
+
+    <section class="wrapper" style="padding: 2em 0 2em 0;">
+        <div class="data-rect">
+            <table>
+                <thead>
+                    <tr>
+
+                        <td>Name</td>
+                        <td>Gender</td>
+                        <td>Age</td>
+                        <td>Breed</td>
+                        <td>Weight</td>
+                        <td>Medications Needed</td>
+                        <td>Type</td>
+                    </tr>
+                </thead>
+
+                <tbody id="database-data">
+                    <tr>
+                        <td>{item.Name}</td>
+                        <td>{item.Gender}</td>
+                        <td>{item.Age}</td>
+                        <td>{item.Breed}</td>
+                        <td>{item.Weight}</td>
+                        <td>{item.Medications}</td>
+                        <td>{item.Type}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="assets\js\jquery.min.js"></script>
+    <script src="assets\js\jquery.dropotron.min.js"></script>
+    <script src="assets\js\browser.min.js"></script>
+    <script src="assets\js\breakpoints.min.js"></script>
+    <script src="assets\js\util.js"></script>
+    <script src="assets\js\main.js"></script>
+</body>
+
+</html>
