@@ -1,0 +1,20 @@
+ID,AnimalName,Age ,AnimalWeight,Gender,Breed,AnimalType,Needs
+100,Clay,7y,48,Male,"Mix Terrier, Pit Bull",Dog,lots of excercise
+200,Dudley,1y,61,Male,Mix Shepherd,Dog,
+300,Rocky,1y,8,Male,Miniature Pinscher Mix,Dog,kind of aggresive
+400,Pablo,8y,22,Male,"Chihuahua, Short Coat Mix",Dog,
+500,Garth,3y,57,Male,Mix Shepherd,Dog,lot of excercise
+600,Cowboy,11m,37,Male,Australian Cattle Dog Mix,Dog,
+700,Barney,2y,33,Male,Basset Hound Mix,Dog,shy
+800,Katrina,3y,86,Female,Alaskan Husky Mix,Dog,
+900,Magpie,1y,6,Female,Mix Terrier,Dog,
+1000,Patch,1y,17,Male,Mix Papillon,Dog,lots of excercise
+1100,Polly,1y,8,Female,"Chihuahua, Short Coat Mix",Dog,
+1200,Pebbles,8y,70,Female,"Shepherd Terrier, Pit Bull",Dog,
+1300,Posie,10m,37,Female,"Shepherd Terrier, Pit Bull",Dog,lots of excercise
+1400,Fozzie,4y,70,Female,"Mix Terrier, Pit Bull",Dog,
+1500,Blinkie,2m,20,Male,Domestic Shorthair Mix,Cat,very shy
+1600,Twinky,2y,6,Male,Domestic Shorthair Mix,Cat,
+1700,Tessa,6m,40,Female,Domestic Shorthair Mix,Cat,
+1800,Ginsburg,5y,38,Female,Domestic Medium Hair Mix,Cat,shy
+1900,Tiger,,14,Female,Domestic Medium Hair Mix,Cat,
