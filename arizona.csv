@@ -1,0 +1,30 @@
+ID,AnimalName,Age ,Gender,Breed,AnimalType,Needs
+100,Lil' Rascal,1,Male,American Pit Bull Terrier ,Dog ,Allergic to dust
+200,Cora ,1,Female,Chihuahua ,Dog ,Allergic to spinich
+300,Shea,1,Female,Chihuahua ,Dog ,N/A
+400,Olive,1,Female,Chihuahua ,dog ,N/A
+500,Beardsley ,1,Female,Chihuahua ,dog ,N/A
+600,Freedom ,3,Female,German Shepard,dog ,big appetite
+700,Borris,2,male,german shepard and alaskan husky,dog ,Itchy skin sometimes
+800,Rangoom,2,male,labrador retriever mix,dog ,N/A
+900,Turk,2,male,chihuahua-long hiared mix,dog ,Itchy skin sometimes
+1000,Lola,2,female,american pit bull terrier mix,dog ,N/A
+1100,Bailey,1,female,english coonhound ,dog ,N/A
+1200,Billy,1,male,american pit bull terrier,dog ,big appetite
+1300,Houdini,1,male,chihuahua,dog ,big appetite
+1400,Coco,5,female,american pit bull terrier mix ,dog ,Itchy skin sometimes
+1500,Daniel,10,male,domestic shorthair ,cat,N/A
+1600,katara,1,female,domestic shorthair ,cat,N/A
+1700,Sokka,1,male,domestic shorthair ,cat,Itchy skin sometimes
+1800,Aang ,1,male ,domestic shorthair ,cat ,N/A
+1900,Neville,1,male,domestic shorthair ,cat ,Itchy skin sometimes
+2000,Peaches,1,female,domestic shorthair ,cat ,N/A
+2100,Emma,1,female,domestic shorthair ,cat ,big appetite
+2300,stanley ,1,male ,domestic shorthair ,cat ,big appetite
+2400,bear ,1,male,domestic shorthair ,cat ,Itchy skin sometimes
+2500,manny ,1,male ,domestic shorthair ,cat ,N/A
+2600,marco ,1,male ,domestic shorthair ,cat,N/A
+2700,moose,1,male,domestic shorthair ,cat,N/A
+2800,mimi,1,female,domestic shorthair ,cat,N/A
+2900,mika,1,female,domestic shorthair ,cat,allergic to lettuce
+3000,sydney,1,female,domestic shorthair ,cat,Itchy skin sometimes
