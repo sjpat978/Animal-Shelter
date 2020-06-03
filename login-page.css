@@ -1,105 +1,75 @@
 html{
-    height: 100%;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  background-image: url(images/register-background.jpg);
+  height: 100%;
+  widows: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.boxthing {
+  width: 480px;
+  height: 580px;
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  margin: 6% auto;
+  background: white;
+  padding: 5px;
+
+}
+
+h1, h2 {
+  position: relative;
+}
+h1 {
+  font-size: 39px;  
+  padding: 0px 35px; 
+}
+h2 {
+  padding: 10px 17px;
+  color: gray;
+}
+
+.inputtext {
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: .5s;
   
-  body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    background-color: #FFB6C1;
-  }
-  
-  /* White rectangle in the middle of the screen */
-  
-  #main-holder {
-    width: 70%;
-    height: 70%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    background-color: #FFE4E1;  
-    border-radius: 7px;
-    box-shadow: 0px 0px 5px 2px #FFF0F5;
-  }
-  
-  /* -------------------------------------------------------------- */
-  
-  #login-header {}
-  
-  /* -------------------------------------------------------------- */
-  
-  /* Middle row of the main grid (contains the error message) */
-  
-  #login-error-msg-holder {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  /* Error message. By default it's transparent, but the opacity is controlled
-  by JavaScript */
-  
-  #login-error-msg {
-    width: 23%;
-    text-align: center;
-    margin: 0;
-    padding: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #8a0000;
-    border: 1px solid #8a0000;
-    background-color: #e58f8f;
-    opacity: 0;
-  }
-  
-  #error-msg-second-line {
-    display: block;
-  }
-  
-  /* -------------------------------------------------------------- */
-  
-  /* Adjust the positioning of the login form inside the last row of the
-  main grid */
-  
-  #login-form {
-    align-self: flex-start;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  /* Style the login form fields' placeholders */
-  
-  .login-form-field::placeholder {
-    color: #3a3a3a;
-  }
-  
-  /* Style the login form fields (username and password) */
-  
-  .login-form-field {
-    border: none;
-    border-bottom: 1px solid #3a3a3a;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    outline: none;
-    padding: 5px 5px 10px 10px;
-  }
-  
-  /* Style the login button */
-  
-  #login-form-submit {
-    width: 100%;
-    padding: 7px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    background-color: #3a3a3a;
-    cursor: pointer;
-    outline: none;
-  }
+}
+
+.inputfield {
+  width: 150%;
+  padding: 10px 0;
+  margin-left: 20px;
+  margin: 20px;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+
+}
+
+.submitbtn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+.submitbtn:hover {
+  color: darkgrey;
+}

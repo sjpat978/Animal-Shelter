@@ -3,29 +3,22 @@ CREATE TABLE users (
   firstName VARCHAR NOT NULL,
   lastName VARCHAR NOT NULL,
   email VARCHAR NOT NULL,
-  pw VARCHAR NOT NULL,
-  place VARCHAR NOT NULL
+  password1 VARCHAR NOT NULL,
 );
-
 CREATE TABLE users_staff (
   UserID2 SERIAL PRIMARY KEY,
   firstName2 VARCHAR NOT NULL,
   lastName2 VARCHAR NOT NULL,
   email2 VARCHAR NOT NULL,
-  pw2 VARCHAR NOT NULL,
-  place2 VARCHAR NOT NULL,
-  shelter2 VARCHAR NOT NULL
+  password2 VARCHAR NOT NULL,
+  shelter VARHCAR NOT NULL,
 );
-
 CREATE TABLE illinois (
-    AnimalID SERIAL PRIMARY KEY,
-    AnimalType VARCHAR  NOT NULL,
+    AnimalType SERIAL PRIMARY KEY,
     AnimalBreed VARCHAR NOT NULL,
     AnimalName VARCHAR NOT NULL,
     Age INTEGER NOT NULL,
-    Medical VARCHAR NOT NULL,
-    Exercise VARCHAR NOT NULL,
-    OtherNeeds VARCHAR NOT NULL
+    Needs VARCHAR NOT NULL,
 );
 
 CREATE TABLE arizona (
@@ -34,9 +27,7 @@ CREATE TABLE arizona (
     AnimalBreed VARCHAR NOT NULL,
     AnimalName VARCHAR NOT NULL,
     Age INTEGER NOT NULL,
-    Medical VARCHAR NOT NULL,
-    Exercise VARCHAR NOT NULL,
-    OtherNeeds VARCHAR NOT NULL
+    Needs VARCHAR NOT NULL,
 );
 
 CREATE TABLE california (
@@ -45,11 +36,8 @@ CREATE TABLE california (
     AnimalBreed VARCHAR NOT NULL,
     AnimalName VARCHAR NOT NULL,
     Age INTEGER NOT NULL,
-    Medical VARCHAR NOT NULL,
-    Exercise VARCHAR NOT NULL,
-    OtherNeeds VARCHAR NOT NULL
+    Needs VARCHAR NOT NULL,
 );
-
 
 
 
