@@ -1,4 +1,4 @@
-<<<<<<< HEAD:templates/index.html
+
 <!DOCTYPE HTML>
 <html lang=en>
 	<head>
@@ -29,15 +29,15 @@
 								<li>
 									<a href="#">Customers</a>
 									<ul>
-										<li><a href="login-page.html">Log in!</a></li>
-										<li><a href="register.html">Register</a></li>
+										<li><a href="{{ url_for('login') }}">Log in!</a></li>
+										<li><a href="{{ url_for('register') }}">Register</a></li>
 									</ul>
 								</li>
 								<li>
 									<a href="#">Staff</a>
 								    <ul>
-										<li><a href="login_staff.html">Log in!</a></li>
-										<li><a href="register_staff.html">Register!</a></li>
+										<li><a href="{{ url_for('login_staff') }}">Log in!</a></li>
+										<li><a href="{{ url_for('register_staff') }}">Register!</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -397,4 +397,5 @@
 
 	</body>
 </html>
+>>>>>>> a533950e732ad33d4bc21973cefbcb00d8b7ac55:index.html
 >>>>>>> a533950e732ad33d4bc21973cefbcb00d8b7ac55:index.html
