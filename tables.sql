@@ -7,8 +7,7 @@ CREATE TABLE users (
 );
 CREATE TABLE users_staff (
   UserID2 SERIAL PRIMARY KEY,
-  firstName2 VARCHAR NOT NULL,
-  lastName2 VARCHAR NOT NULL,
+  shelter VARCHAR NOT NULL,
   email2 VARCHAR NOT NULL,
   password2 VARCHAR NOT NULL,
   shelter VARHCAR NOT NULL,
@@ -20,7 +19,7 @@ CREATE TABLE arizona (
     Gender VARCHAR NOT NULL,
     Breed VARCHAR  NOT NULL,
     AnimalType VARCHAR NOT NULL,
-    Needs VARCHAR NOT NULL,
+    Needs VARCHAR,
 );
 
 CREATE TABLE illinois (
@@ -31,16 +30,18 @@ CREATE TABLE illinois (
     Gender VARCHAR NOT NULL,
     Breed VARCHAR NOT NULL,
     AnimalType VARCHAR NOT NULL,
-    Needs VARCHAR NOT NULL,
+    Needs VARCHAR,
 );
 
 CREATE TABLE california (
-    Type SERIAL PRIMARY KEY,
-    Breed VARCHAR NOT NULL,
-    Name VARCHAR NOT NULL,
+    ID SERIAL PRIMARY KEY,
+    AnimalName VARCHAR NOT NULL, 
     Age INTEGER NOT NULL,
-    Needs VARCHAR NOT NULL,
+    AnimalWeight INTEGER NOT NULL,
+    Gender VARCHAR NOT NULL,
+    Breed VARCHAR NOT NULL,
+    AnimalType VARCHAR NOT NULL,
+    Needs VARCHAR,
 );
-
 
 
