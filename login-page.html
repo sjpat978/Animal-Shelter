@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Tech for Tails</title>
   <link rel="stylesheet" href="static\css\login-page.css" type="text/css">
+  <script type = "text/javascript" src = "login-page.js"></script>
   
   
 </head>
@@ -16,12 +17,12 @@
       <h1>Tech for Tails</h1>
       <hr style="width: 90%;">
       <h2>Login</h2>
-          <form class="inputtext">
+          <form class="inputtext login-form" name = "login-form">
              
-              <input type="text" class="inputfield" placeholder="Username">
-              <input type="password" class="inputfield" placeholder="Password">
+              <input type="username" class="inputfield" name = "uname" placeholder="Username">
+              <input type="password" class="inputfield" name = "pass" placeholder="Password">
               
-              <button type="submit" class="submitbtn">
+              <button type="submit" class="submitbtn login-form-submit" onclick = "valid()">
                 Submit
               </button>
            </form>
